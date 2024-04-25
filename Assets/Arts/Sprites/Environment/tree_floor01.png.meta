@@ -1,0 +1,1135 @@
+fileFormatVersion: 2
+guid: cfa18ea5e5bf54d4c914af7e2e55b3ed
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tree_floor01_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 4092
+        width: 251
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5543eae7c3fc6f4f8fab07ead5a9deb
+      internalID: -969281067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_1
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 4093
+        width: 236
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c450439183f1eff429427db7fc73e6ff
+      internalID: 1999668353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_2
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 4089
+        width: 242
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfc567b090390140bc4b315bcfd02e0
+      internalID: 320558658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_3
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 4103
+        width: 104
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46988b8ea00db224f98b5c012350add2
+      internalID: 659915255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_4
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 4096
+        width: 104
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e665bac2b186f4791dccbea53c2e8f
+      internalID: -2075016400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_5
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 4093
+        width: 110
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2319646dfcd0843a4acb95ba13fe27
+      internalID: -1607805949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_6
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 4079
+        width: 100
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30409a20f7bcf9147a8396bd0e70864e
+      internalID: 706775987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_7
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 4083
+        width: 107
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef99df6ea1fa76f4d9098f5cc0c5da05
+      internalID: 1412454545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_8
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 4061
+        width: 218
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cb608ec883fad409652b4f0f3d8e60
+      internalID: 22524423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_9
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 4072
+        width: 222
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad01cb1a43e00924daba0895ab6cf952
+      internalID: 544138845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_10
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 4013
+        width: 1053
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38d79a57fcf40144a41eed34cd65b7a
+      internalID: -70359724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_11
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1763
+        width: 3111
+        height: 2650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffd21f7a1fd00e429cdb2253e6522f4
+      internalID: 1292648237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_12
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 3787
+        width: 575
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6d65b26ff412d4c991b62947770d50
+      internalID: 2030594189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_13
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 3701
+        width: 298
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71a644755d2e88479044287a8368075
+      internalID: -1768003409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_14
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 3853
+        width: 416
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8516c3aa898fe1d48bf0b04436df576a
+      internalID: 2064588955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_15
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 3846
+        width: 412
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a8c5e949f5492418bb09fe07344f37
+      internalID: 1834971860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_16
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 3832
+        width: 222
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18828cad16580e340aff6d49fa9ccb65
+      internalID: 1245346179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_17
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 3531
+        width: 1206
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa770b6c954bee4ca1e9c5b6e322b02
+      internalID: 1874333337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3494
+        width: 611
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bf44bf0d5f01d4bb086b65cdfcfce5
+      internalID: 1666077103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_19
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 3687
+        width: 298
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efeeba338ebd17449d711f87dc971f9
+      internalID: -1033931401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_20
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 3701
+        width: 307
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b117d6ef6b6c949a028f674abb4b3e
+      internalID: -172110834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_21
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 3513
+        width: 294
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d2150f4f721a540a48511cde81e6bb
+      internalID: -659493012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_22
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 3479
+        width: 291
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0626ac1b878dab4b83367b98176c0ee
+      internalID: -76072834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_23
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 3507
+        width: 284
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1212e1e191b39e84f9c0345540104f1d
+      internalID: -2144607365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_24
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 3468
+        width: 214
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a982b1656fce7744b29dce4c510664f
+      internalID: 1670132899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_25
+      rect:
+        serializedVersion: 2
+        x: 2033
+        y: 3163
+        width: 949
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab79d72e017bbe241b0a2d7623d04676
+      internalID: -287123843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_28
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 3223
+        width: 481
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cd2e4d9399d1a479f8586421ef9edd
+      internalID: -1767123976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_29
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 3233
+        width: 422
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934cdeeaf6da96246ae4a99d3b9b53ce
+      internalID: 1646786663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_31
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 3222
+        width: 423
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f736a7fb50044f40885f20412bc124d
+      internalID: 907205016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_32
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 3215
+        width: 228
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dc1622cadb96f46960c709cd64c40e
+      internalID: 1250387821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_39
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 2799
+        width: 925
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f3849105bb0a24e88bf701a3bd18e5
+      internalID: -841331077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_40
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 2744
+        width: 1008
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf5113fd0bfcf847abc4046dca8d33f
+      internalID: -705596355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_42
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 2806
+        width: 849
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d486bf59cf464d04abdf0c38f9e9faef
+      internalID: -315074896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_59
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 1874
+        width: 3181
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8370e4f0a708fb4da16c268c7570f52
+      internalID: -389397673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_69
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 0
+        width: 3645
+        height: 1724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc81d98d8294ba46a579c3e8985e030
+      internalID: -160983430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 473
+        width: 3252
+        height: 1220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fa9e94b141c6549947fc5194c9346a
+      internalID: 501102426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_88
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 463
+        width: 219
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca7ed3eeea4382409180d81489f9ee1
+      internalID: 1937512357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_89
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 460
+        width: 149
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2c282733e433248a9560e7149f6e8b
+      internalID: -49126836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_90
+      rect:
+        serializedVersion: 2
+        x: 2775
+        y: 463
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065f738f3ae679c409dd4e151b81407f
+      internalID: 1858985786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_91
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 461
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb99f269fe3c0d488ff72e57dccf401
+      internalID: 122875302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_92
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 460
+        width: 49
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8826b2532f9910c41b5502fc11b6d52c
+      internalID: -1923844330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_93
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 460
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edfa1b6c4fe489419fd1e90dd4a52c7
+      internalID: -1050729061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_94
+      rect:
+        serializedVersion: 2
+        x: 2910
+        y: 459
+        width: 313
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121a7e80dca717a499ad3b90aaef99d4
+      internalID: 88306575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_floor01_95
+      rect:
+        serializedVersion: 2
+        x: 3226
+        y: 463
+        width: 69
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f9a8285eab3ad4db0d255acc098ab7
+      internalID: -1910546234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tree_floor01_0: -969281067
+      tree_floor01_1: 1999668353
+      tree_floor01_10: -70359724
+      tree_floor01_11: 1292648237
+      tree_floor01_12: 2030594189
+      tree_floor01_13: -1768003409
+      tree_floor01_14: 2064588955
+      tree_floor01_15: 1834971860
+      tree_floor01_16: 1245346179
+      tree_floor01_17: 1874333337
+      tree_floor01_18: 1666077103
+      tree_floor01_19: -1033931401
+      tree_floor01_2: 320558658
+      tree_floor01_20: -172110834
+      tree_floor01_21: -659493012
+      tree_floor01_22: -76072834
+      tree_floor01_23: -2144607365
+      tree_floor01_24: 1670132899
+      tree_floor01_25: -287123843
+      tree_floor01_26: 1500860771
+      tree_floor01_27: -128938745
+      tree_floor01_28: -1767123976
+      tree_floor01_29: 1646786663
+      tree_floor01_3: 659915255
+      tree_floor01_30: -2070695668
+      tree_floor01_31: 907205016
+      tree_floor01_32: 1250387821
+      tree_floor01_33: -1044484519
+      tree_floor01_34: -722669439
+      tree_floor01_35: -745589407
+      tree_floor01_36: -445087625
+      tree_floor01_37: 1599581043
+      tree_floor01_38: 1691543868
+      tree_floor01_39: -841331077
+      tree_floor01_4: -2075016400
+      tree_floor01_40: -705596355
+      tree_floor01_41: 1291420920
+      tree_floor01_42: -315074896
+      tree_floor01_43: 2006971225
+      tree_floor01_44: -1656557225
+      tree_floor01_45: -277268268
+      tree_floor01_46: 1314775604
+      tree_floor01_47: -1137031883
+      tree_floor01_48: -134365396
+      tree_floor01_49: -829286148
+      tree_floor01_5: -1607805949
+      tree_floor01_50: -661082532
+      tree_floor01_51: -1086739038
+      tree_floor01_52: -1645919046
+      tree_floor01_53: -788387630
+      tree_floor01_54: -1944202245
+      tree_floor01_55: -1802412422
+      tree_floor01_56: -1559925974
+      tree_floor01_57: 1450527361
+      tree_floor01_58: -1655408377
+      tree_floor01_59: -389397673
+      tree_floor01_6: 706775987
+      tree_floor01_60: 905564174
+      tree_floor01_61: -252340153
+      tree_floor01_62: 1043240329
+      tree_floor01_63: -1652557093
+      tree_floor01_64: -1914156366
+      tree_floor01_65: 222824804
+      tree_floor01_66: 795958522
+      tree_floor01_67: -2010856416
+      tree_floor01_68: 1550951900
+      tree_floor01_69: -160983430
+      tree_floor01_7: 1412454545
+      tree_floor01_70: 834595716
+      tree_floor01_71: -1152968768
+      tree_floor01_72: -393831745
+      tree_floor01_73: 1418552554
+      tree_floor01_74: 1695393173
+      tree_floor01_75: -476783767
+      tree_floor01_76: 1363410644
+      tree_floor01_77: -129554973
+      tree_floor01_78: -1559504127
+      tree_floor01_79: -1052398984
+      tree_floor01_8: 22524423
+      tree_floor01_80: 2069575650
+      tree_floor01_81: -2044497784
+      tree_floor01_82: -772113970
+      tree_floor01_83: 1541604723
+      tree_floor01_84: 501102426
+      tree_floor01_85: 1001616854
+      tree_floor01_86: 1547736116
+      tree_floor01_87: 1491794816
+      tree_floor01_88: 1937512357
+      tree_floor01_89: -49126836
+      tree_floor01_9: 544138845
+      tree_floor01_90: 1858985786
+      tree_floor01_91: 122875302
+      tree_floor01_92: -1923844330
+      tree_floor01_93: -1050729061
+      tree_floor01_94: 88306575
+      tree_floor01_95: -1910546234
+      tree_floor01_96: 1436673678
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemies
+  - Coin
+  - Ground
+  - Harmful
+  - BashAble
+  - AbilityTree
+  - Tramp
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Player
+  - Ground
+  - Projectiles
+  - ItemCollect
+  - Enemies
+  - 
+  - Confiner
+  - Laser
+  - BashAble
+  - 
+  - Wall
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 2046411531
+    locked: 0
+  - name: Ground
+    uniqueID: 1594644481
+    locked: 0
+  - name: Player
+    uniqueID: 2581021233
+    locked: 0
+  - name: items
+    uniqueID: 1847400221
+    locked: 0
+  - name: Enemies
+    uniqueID: 3195987667
+    locked: 0
+  - name: Wall
+    uniqueID: 1767954643
+    locked: 0
+  - name: bullet
+    uniqueID: 2328698107
+    locked: 0
+  - name: grass
+    uniqueID: 626023707
+    locked: 0
