@@ -61,7 +61,7 @@ Material:
     - _QueueOffset: 0
     - _SrcBlend: 1
     - _Surface: 0
-    - _WinIndensity: 0.5
+    - _WinIndensity: 0.24
     - _WindSpeed: 3
     - _YMaskInFluence: 1
     - _ZTest: 4
