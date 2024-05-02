@@ -22,12 +22,13 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     [Range(0f, .3f)][SerializeField] private float movementSmoothing = .05f;
 
 
-    const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+    const float k_GroundedRadius = .6f; // Radius of the overlap circle to determine if grounded
 
     protected bool isFacingRight = true;
     
   //  private bool isJump = false;
     private bool canJump = true;
+    private bool canAutoJump = false;
     private float horizontalMove = 0f;
     public bool Grounded;
     private Vector3 Velocity = Vector3.zero;
@@ -75,13 +76,17 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         {
             canJump = true;
             jumpForce = _baseJumpForce;
+            Grounded = true;
+            canAutoJump = false;
+            OnLandEvent.Invoke();
         }
 
         if(collision.gameObject.CompareTag("Tramp"))
         {
-            canJump = true;
+            canAutoJump = true;
             _isJumpOnTramp = true;
             OnLandEvent.Invoke();
+
         }
 
     }
@@ -94,10 +99,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         kb = GetComponent<KnockBack>();
     }
 
-    private void OnEnable()
-    {
-        Debug.Log("OnEnable");
-    }
 
     public void LoadData(GameData data)
     {
@@ -112,7 +113,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     private void FixedUpdate()
     {
-        this.CheckOnGround();
+    //    this.CheckOnGround();
         FlipAnim();
         this.GetTargetPos();
         if(!kb.isBeingKnockBack)
@@ -145,7 +146,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     public void CheckOnGround()
     {
-        bool wasGrounded = Grounded;
+       bool wasGrounded = Grounded;
         Grounded = false;
 
         Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(groundCheck.position, k_GroundedRadius, m_WhatIsGround);
@@ -157,35 +158,41 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
                 if (!wasGrounded)
                     OnLandEvent.Invoke();
             }
-        }  
+        } 
+
+
+        if(canJump && _isJumpOnTramp)
+        {
+            OnLandEvent.Invoke();
+        }
     }
 
     float CurrentJumpForce()
     {
-        if(!Grounded && _isJumpOnTramp)
+        if( _isJumpOnTramp)
         {
-            jumpForce += 150;
+            jumpForce += 200;
         }
-        if(jumpForce >= 1200)
+        if(jumpForce >= 1800)
         {
-            jumpForce = 1200;
+            jumpForce = 1800;
         }
         return jumpForce;
     }
 
     protected virtual void AutoJump()
     {
-        if (canJump && _isJumpOnTramp && !Grounded)
+        if (canAutoJump && _isJumpOnTramp)
         {
             anim.SetBool("IsJumping", true);
-            canJump = false;
+            canAutoJump = false;
             rb.AddForce(new Vector2(0f, CurrentJumpForce()));
         }
     }
 
     protected virtual void Jumping()
     {
-        if(canJump && InputManager.Instance.Jump)
+        if(canJump && InputManager.Instance.Jump && Grounded)
         {
             anim.SetBool("IsJumping", true);
             canJump = false;
