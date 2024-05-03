@@ -10,19 +10,42 @@ public class AbilityTreeActiveEffect : MonoBehaviour
     private Material _material;
 
     private int _dissolveAmount = Shader.PropertyToID("_DissolveAmount");
+    [SerializeField] private bool _canInteract = false;
+
+    [SerializeField] Collider2D col;
+
+    public GameObject leaf;
 
     private void Start()
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         _material = _spriteRenderer.material;
+
+        leaf.SetActive(false);
+        col = GetComponent<Collider2D>();
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision!=null)
+        {
+            if(collision.gameObject.CompareTag("Player"))
+            {
+                _canInteract = true;
+                //col.enabled = false;
+            }
+        }
+    }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.H))
+        if(_canInteract && Input.GetKeyDown(KeyCode.H))
         {
             StartCoroutine(Vanish());
+            leaf.SetActive(true);
+            _canInteract = false;
+            col.enabled = false;
         }
     }
     private IEnumerator Vanish()

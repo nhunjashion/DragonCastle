@@ -44,7 +44,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: -11
     m_Colors:
-    - _Color: {r: 0.9098039, g: 0.63723105, b: 0.52156866, a: 0}
+    - _Color: {r: 0.93962264, g: 0.14714837, b: 0.52629393, a: 0}
     - _LaserEdgeSmoothless: {r: 20, g: 6, b: 0, a: 0}
     - _LaserThickness: {r: 19.84, g: 2, b: 0, a: 0}
     - _Speed: {r: 1, g: 0, b: 0, a: 0}
