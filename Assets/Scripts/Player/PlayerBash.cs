@@ -78,7 +78,7 @@ public class PlayerBash : MonoBehaviour
                 }
                 else
                 {
-                    transform.eulerAngles = new Vector3(0, 180, 0);
+                    transform.eulerAngles = new Vector3(0, 0, 0);
                 }
                 bashDir = bashDir.normalized;
                 BashAbleObj.GetComponent<Rigidbody2D>().AddForce(-bashDir * 30, ForceMode2D.Impulse);
