@@ -6,27 +6,47 @@ public class PlayerDash : MonoBehaviour
 {
     private bool canDash = true;
     private bool isDashing;
-    private float dashPower = 100f;
-    private float dashTime = 0.2f;
-    private float dashCooldown = 1f;
+    [SerializeField] private float dashPower = 100f;
+    [SerializeField] private float dashTime = 0.2f;
+    [SerializeField] private float dashCooldown = 1f;
 
     [SerializeField] private TrailRenderer tr;
+
     private Rigidbody2D rb;
+    Collider2D col;
     private void Start()
     {
-        rb= GetComponent<Rigidbody2D>();    
+        rb= GetComponent<Rigidbody2D>(); 
+        col= GetComponent<CapsuleCollider2D>();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision!=null)
+        {
+            if(collision.gameObject.CompareTag("Ground"))
+            {
+                canDash = false;
+            }
+
+        }
+    }
+
 
     private void Update()
     {
 
             if (isDashing)
             {
+                
                 return;
             }
-            if(InputManager.Instance.Dashing)
+            if(InputManager.Instance.Dashing && canDash)
             {
-                StartCoroutine(Dashing());
+                StartCoroutine(Dashing());    
+                if(col.gameObject.CompareTag("Ground") && isDashing)
+                {
+                    rb.velocity=Vector2.zero;
+                }
             }
         
         

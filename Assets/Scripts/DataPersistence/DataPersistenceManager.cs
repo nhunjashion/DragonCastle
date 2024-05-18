@@ -16,6 +16,7 @@ public class DataPersistenceManager : MonoBehaviour
     private List<IDataPersistence> dataPersistenceObjects;
     private FileDataHandler dataHandler;
 
+    [SerializeField] private GameObject playerRespawnPoint;
     private void Awake()
     {
         if (instance != null)
@@ -80,6 +81,7 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.LoadData(gameData);
         }
         Debug.Log("Loaded death count = " + gameData.deathCount);
+
     }
 
     public void SaveGame()
@@ -96,6 +98,9 @@ public class DataPersistenceManager : MonoBehaviour
 
         dataHandler.Save(gameData);
         Debug.Log("Saved death count = " + gameData.deathCount);
+
+        playerRespawnPoint.transform.position = gameData.playerPosition;
+        Debug.Log("Game Saved!");
 
     }
 

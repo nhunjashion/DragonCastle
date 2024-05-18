@@ -34,6 +34,12 @@ public class InputManager : MonoBehaviour
     [SerializeField] protected bool up;
     public bool Up { get => up; }
 
+
+    [SerializeField] protected bool interact;
+    public bool Interact { get => interact; }
+
+
+
     private void Awake()
     {
         InputManager.instance = this;
@@ -55,7 +61,7 @@ public class InputManager : MonoBehaviour
         GetShootBeam();
         GetEscButton();
         GetUp();
-        
+        GetInteract();
     }
 
     protected virtual void GetMousePos()
@@ -63,7 +69,7 @@ public class InputManager : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    protected virtual void GetDirection()
+    public void GetDirection()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
     }
@@ -76,9 +82,9 @@ public class InputManager : MonoBehaviour
 
 
 
-    protected virtual void GetSpace()
+    public void GetSpace()
     {
-        jump = Input.GetButtonDown("Jump");
+        jump = Input.GetKeyDown(KeyCode.Space);
     }
 
     protected virtual void GetDash()
@@ -106,5 +112,11 @@ public class InputManager : MonoBehaviour
     protected virtual void GetUp()
     {
         up = Input.GetKeyDown(KeyCode.W);
+    }
+
+
+    protected virtual void GetInteract()
+    {
+        interact = Input.GetKeyDown(KeyCode.F);
     }
 }

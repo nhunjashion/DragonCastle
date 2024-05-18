@@ -15,6 +15,7 @@ public class AbilityTreeActiveEffect : MonoBehaviour
     [SerializeField] Collider2D col;
 
     public GameObject leaf;
+    public GameObject algae;
 
     private void Start()
     {
@@ -40,10 +41,11 @@ public class AbilityTreeActiveEffect : MonoBehaviour
     }
     private void Update()
     {
-        if(_canInteract && Input.GetKeyDown(KeyCode.H))
+        if(_canInteract && InputManager.Instance.Interact)
         {
             StartCoroutine(Vanish());
             leaf.SetActive(true);
+            algae.SetActive(true);
             _canInteract = false;
             col.enabled = false;
         }

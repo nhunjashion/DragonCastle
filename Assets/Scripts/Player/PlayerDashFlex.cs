@@ -8,7 +8,7 @@ public class PlayerDashFlex : MonoBehaviour
     private bool isDashing;
     [SerializeField] private float dashPower = 50f;
     private float dashTime = 0.2f;
-    private float dashCooldown = 1f;
+    private float dashCooldown = 2f;
     private Vector3 target;
 
     [SerializeField] private TrailRenderer tr;

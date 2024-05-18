@@ -4,41 +4,41 @@ using UnityEngine;
 
 public class AbilityActive : MonoBehaviour
 {
-    PlayerBash Bash;
-    private bool _isBashActive =  false;
-    [SerializeField] protected GameObject bashTreeAbility;
+    public static AbilityActive instance;
+    PlayerBash bash;
+    PlayerDashFlex dash;
+    SwordSlash swordSlash;
+    int num;
+
+    [SerializeField] protected GameObject player;
 
     private void Start()
     {
-        Bash = gameObject.GetComponent<PlayerBash>();
-        Bash.enabled = false;
+        bash = player.gameObject.GetComponent<PlayerBash>();
+        dash = player.gameObject.GetComponent<PlayerDashFlex>();
+        swordSlash = player.gameObject.GetComponent<SwordSlash>();
+        num = AbilityTreeProp.instance.treeNum;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void ActiveSkill(int num)
     {
-        if(collision != null)
+        if (num ==1)
         {
-            if(collision.gameObject.CompareTag("AbilityTree"))
-            {
-                _isBashActive = true;
+                    bash.enabled = true;
 
-                Debug.Log("Bash skill unlocked");
-            }
+        Debug.Log("skill unlocked");
+
         }
-    }
 
-
-    private void Update()
-    {
-        ActiveBash();
-    }
-
-    void ActiveBash()
-    {
-        if(_isBashActive)
+        if (num ==2)
         {
-            Bash.enabled = true;
-            bashTreeAbility.GetComponent<BoxCollider2D>().enabled = false;
+            dash.enabled = true;
+            Debug.Log("skill unlocked");
+        }
+        if (num == 3)
+        {
+            swordSlash.enabled = true;
+            Debug.Log("skill unlocked");
         }
     }
 }

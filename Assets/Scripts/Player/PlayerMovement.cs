@@ -173,6 +173,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         {
             jumpForce += 200;
         }
+      //  else { return _baseJumpForce; }
         if(jumpForce >= 1800)
         {
             jumpForce = 1800;
@@ -192,11 +193,17 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     protected virtual void Jumping()
     {
-        if(canJump && InputManager.Instance.Jump && Grounded)
-        {
+        if(!canAutoJump && canJump && InputManager.Instance.Jump   )
+        {        
+            
+            rb.AddForce(new Vector2(rb.velocity.x, _baseJumpForce));
+
             anim.SetBool("IsJumping", true);
+
             canJump = false;
-            rb.AddForce(new Vector2(0f, CurrentJumpForce()));
+
+
+           // rb.velocity=(new Vector2(0f, _baseJumpForce));
         }      
     }
 

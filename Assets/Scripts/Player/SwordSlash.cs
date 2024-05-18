@@ -15,7 +15,7 @@ public class SwordSlash : MonoBehaviour
 
     void Shooting()
     {
-        if (InputManager.Instance.RangedAttack)
+        if (InputManager.Instance.ShootBeam)
         {        
             GameObject bulletSlash = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 

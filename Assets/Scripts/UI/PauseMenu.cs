@@ -2,11 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     [SerializeField] GameObject pauseMenuUI;
+
+
+
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     
     public void Pause()
     {
@@ -26,13 +36,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void SaveGame()
-    {
-        Time.timeScale = 1;
-    }
+
 
     public void Quit()
     {
-
+        Application.Quit();
     }
 }
