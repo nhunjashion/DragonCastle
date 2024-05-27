@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.PlayMainMenuBGM();
         if(!DataPersistenceManager.instance.HasGameData())
         {
             continueGameButton.interactable = false;

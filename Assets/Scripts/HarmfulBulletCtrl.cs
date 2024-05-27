@@ -5,7 +5,7 @@ using UnityEngine;
 public class HarmfulBulletCtrl : MonoBehaviour
 {
     private float Timer = 3;
-
+    int dmg = 10;
     private void Update()
     {
         Timer -= Time.deltaTime;
@@ -28,7 +28,7 @@ public class HarmfulBulletCtrl : MonoBehaviour
         IDamageable iDamageable = collision.gameObject.GetComponent<IDamageable>();
         if(iDamageable != null)
         {
-            iDamageable.Damage(0, (InputForEnemy.Instance.PlayerPos - transform.localPosition).normalized);
+            iDamageable.Damage(dmg);
         }
     }
 }

@@ -21,13 +21,17 @@ public class PlayerBash : MonoBehaviour
 
     Rigidbody2D rb;
 
-    
+    Animator anim;
+
+    public CapsuleCollider2D col;
+    public float timeInv = 0.1f;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         bashTimeReset = _bashTime;
-
+        anim = GetComponent<Animator>();
+        col = GetComponent<CapsuleCollider2D>();
     }
 
    
@@ -39,9 +43,11 @@ public class PlayerBash : MonoBehaviour
 
     void Bashing()
     {
+
         RaycastHit2D[] Rays = Physics2D.CircleCastAll(transform.position, raduis, Vector3.forward);
         foreach (RaycastHit2D ray in Rays)
         {
+           // anim.SetTrigger("IsBashing");
             _nearToBashAbleObj = false;
             if(ray.collider.tag == "BashAble")
             {
@@ -55,6 +61,7 @@ public class PlayerBash : MonoBehaviour
             BashAbleObj.GetComponent<SpriteRenderer>().color = Color.cyan;
             if (Input.GetKeyDown(KeyCode.Q)) 
             {
+
                 Time.timeScale = 0;
                 BashAbleObj.transform.localScale = new Vector2(1.4f, 1.4f);
                 arrow.SetActive(true);
@@ -63,6 +70,7 @@ public class PlayerBash : MonoBehaviour
             }
             else if (_isChosingDir && Input.GetKeyUp(KeyCode.Q))
             {
+                AudioManager.instance.PlaySFX(AudioManager.instance.bash);
                 Time.timeScale = 1;
                 BashAbleObj.transform.localScale = new Vector2(1, 1);
                 _isChosingDir = false;
@@ -81,7 +89,7 @@ public class PlayerBash : MonoBehaviour
                     transform.eulerAngles = new Vector3(0, 0, 0);
                 }
                 bashDir = bashDir.normalized;
-                BashAbleObj.GetComponent<Rigidbody2D>().AddForce(-bashDir * 30, ForceMode2D.Impulse);
+                BashAbleObj.GetComponent<Rigidbody2D>().AddForce(-bashDir * 50, ForceMode2D.Impulse);
                 arrow.SetActive(false);
             }
             //transform.eulerAngles = new Vector3(0, 0, 0);
@@ -95,13 +103,19 @@ public class PlayerBash : MonoBehaviour
 
         if (_isBashing)
         {
+
             if (_bashTime > 0)
             {
+
+                PlayerHealth.Instance.canGetDmg = false;
                 _bashTime -= Time.deltaTime;
                 rb.velocity = bashDir * _bashPower * Time.deltaTime;
+
             }
             else
             {
+                PlayerHealth.Instance.canGetDmg = true;
+                timeInv = 0.1f;
                 _isBashing = false;
                 _bashTime = bashTimeReset;
                 rb.velocity = new Vector2(rb.velocity.x, 0);

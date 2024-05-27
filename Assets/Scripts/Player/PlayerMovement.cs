@@ -91,12 +91,35 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     }
 
+
+    
+/*  private void OnTriggerStay2D(Collider2D collision)
+    {
+           
+        if (collision.gameObject.CompareTag("CastleOn"))
+        {
+
+        }
+        else if(collision.gameObject.CompareTag("Forest"))
+        {
+            AudioManager.instance.PlayBgmMusic(AudioManager.instance.bgmForest);
+        }
+        else if(collision.gameObject.CompareTag("CastleUnder"))
+        {
+            AudioManager.instance.PlayBgmMusic(AudioManager.instance.bgmCastleUnder);
+        }
+
+
+    }*/
+
+
     private void Start()
     {
         Debug.Log("Start");
         PlayerMovement.instance = this;
         anim = GetComponent<Animator>();
         kb = GetComponent<KnockBack>();
+        PlayBgmMusic();
     }
 
 
@@ -123,6 +146,63 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         }
 
         this.AutoJump();
+        PlayBgmMusic();
+    }
+
+
+    void PlayBgmMusic()
+    {
+        if (this.transform.position.x <= 280)
+        {
+            if (!AudioManager.instance.bgmSourceForest.isPlaying)
+            {
+                AudioManager.instance.PlayBgmMusicForest();
+            }
+        }
+        else
+        {
+            if (AudioManager.instance.bgmSourceForest.isPlaying)
+                {
+                    AudioManager.instance.bgmSourceForest.Stop();
+                }
+        }
+
+        if (this.transform.position.x > 290 )
+        {
+            if(this.transform.position.y >= -3.5)
+            {
+                if (!AudioManager.instance.bgmSourceCastleOn.isPlaying)
+                {
+                    AudioManager.instance.PlayBgmMusicCastleOn();
+                }
+
+            }
+            else
+            {
+                if (AudioManager.instance.bgmSourceCastleOn.isPlaying)
+                {
+                    AudioManager.instance.bgmSourceCastleOn.Stop();
+                }
+            }
+
+            if (this.transform.position.y < -3.5)
+            {
+                if (!AudioManager.instance.bgmSourceCastleUnder.isPlaying)
+                {
+                   AudioManager.instance.PlayBgmMusicCastleUnder();
+                }
+ 
+            }
+            else
+            {
+                if (AudioManager.instance.bgmSourceCastleUnder.isPlaying)
+                {
+                    AudioManager.instance.bgmSourceCastleUnder.Stop();
+                }
+            }
+
+        }
+        
     }
 
 
@@ -186,6 +266,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         if (canAutoJump && _isJumpOnTramp)
         {
             anim.SetBool("IsJumping", true);
+            AudioManager.instance.PlaySFX(AudioManager.instance.jump);
             canAutoJump = false;
             rb.AddForce(new Vector2(0f, CurrentJumpForce()));
         }
@@ -194,8 +275,8 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     protected virtual void Jumping()
     {
         if(!canAutoJump && canJump && InputManager.Instance.Jump   )
-        {        
-            
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.jump);
             rb.AddForce(new Vector2(rb.velocity.x, _baseJumpForce));
 
             anim.SetBool("IsJumping", true);

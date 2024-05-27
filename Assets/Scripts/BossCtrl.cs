@@ -12,8 +12,11 @@ public class BossCtrl : MonoBehaviour
     [SerializeField] protected float _attackRange;
     public Transform attackPoint;
 
+    public Transform pivot;
+    public Vector2 pivotDir;
+
     //attack Player 
-    private Vector2 _playerTarget;
+    [SerializeField] private Vector2 _playerTarget;
     [SerializeField] private LayerMask _whatIsPlayer;
     bool isDetectPlayer;
     bool canLeap;
@@ -35,15 +38,21 @@ public class BossCtrl : MonoBehaviour
 
     Rigidbody2D rb;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public float timeReset = 50;
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            _canFly = true;
-        }  
+            IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+            if (damageable != null)
+            {
+                damageable.Damage(10);
+
+            }
+        } 
     }
-
-
 
     private void Awake()
     {
@@ -58,7 +67,7 @@ public class BossCtrl : MonoBehaviour
         FlipTowardPlayer();
        // FlyUp();
         Leaping();
-
+        ResetEnemy();
     }
 
     void CheckOnGround()
@@ -97,9 +106,18 @@ public class BossCtrl : MonoBehaviour
             rb.velocity = _playerTarget * _speed;
 
             coolDown = 4;
- 
         }
-        
+    }
+
+    void ResetEnemy()
+    {
+        timeReset -= Time.deltaTime;
+
+        if(timeReset <= 0)
+        {
+            transform.position = pivot.transform.position;
+            timeReset = 50;
+        }
     }
 
     void FlipTowardPlayer()

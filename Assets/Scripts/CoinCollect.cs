@@ -48,6 +48,7 @@ public class CoinCollect : MonoBehaviour, IDataPersistence
             collected = true;
             visual.gameObject.SetActive(false);
             Debug.Log("coin collected");
+            AudioManager.instance.PlaySFX(AudioManager.instance.keyCollect);
             //GameEventsManager.instance.CoinCollected();
 
             //CoinCounter.instance.IncreaseCoins(value);

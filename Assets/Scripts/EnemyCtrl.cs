@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCtrl : MonoBehaviour
+public class EnemyCtrl : MonoBehaviour, IDamageable
 {
     protected static EnemyCtrl instance;
     public static EnemyCtrl Instance { get => instance; }
 
     [SerializeField] private int _maxHP = 10;
-    [SerializeField] protected int currentHP;
+    [SerializeField] public int currentHP;
 
     Animator anim;
+
+    public ParticleSystem dieEff;
     //Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -24,9 +26,9 @@ public class EnemyCtrl : MonoBehaviour
 
     }
 
-    public void TakeDmg(int dmg)
+    public void TakeDmg(int dmgAmount)
     {
-        currentHP -= dmg;
+        currentHP -= dmgAmount;
 
         if(currentHP <= 0)
         {
@@ -34,12 +36,20 @@ public class EnemyCtrl : MonoBehaviour
         }
     }
 
+    public void Damage(int dmgAmount)
+    {
+        TakeDmg(dmgAmount);
+    }
+
+
     void Die()
     {
         //rb.gravityScale = 0f;
         Debug.Log("Enemy die");
         anim.SetBool("IsDead", true);
         GetComponent<Collider2D>().enabled = false;
+        dieEff.Play();
+        Destroy(gameObject);
     }
 
     

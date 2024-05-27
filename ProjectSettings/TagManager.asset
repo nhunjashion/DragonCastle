@@ -11,6 +11,11 @@ TagManager:
   - BashAble
   - AbilityTree
   - Tramp
+  - CastleOn
+  - CastleUnder
+  - Forest
+  - EnemyPivot
+  - Boss
   layers:
   - Default
   - TransparentFX

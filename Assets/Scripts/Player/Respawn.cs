@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour, IDataPersistence
 {
+    public static Respawn instance;
     [SerializeField] private Transform respawnPoint;
     
     private int _deathCount=0;
@@ -36,25 +37,20 @@ public class Respawn : MonoBehaviour, IDataPersistence
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Die()
     {
-        if(collision.gameObject.CompareTag("Harmful"))
+        if(PlayerHealth.Instance.Hp <=0)
         {
-            Die();
             _deathCount++;
-            //DeathCount.instance.Deathsum(_deathCount);
+            StartCoroutine(Respawning(1f));
+            Debug.Log("RESPAWN");
         }
-    }
 
-
-    void Die()
-    {
-        StartCoroutine(Respawning(1f));
     }
 
     IEnumerator Respawning(float duration)
     {
-        anim.SetBool("IsDead", true);
+        anim.SetTrigger("IsDead");
         rb.simulated = false;
         yield return new WaitForSeconds(duration);
 
@@ -64,7 +60,6 @@ public class Respawn : MonoBehaviour, IDataPersistence
         transform.position = respawnPoint.position;
         sr.enabled = true;
         rb.simulated = true;
-        anim.SetBool("IsDead", false);
-        
+        anim.SetTrigger("IsDead");
     }
 }

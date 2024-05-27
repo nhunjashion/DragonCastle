@@ -32,6 +32,15 @@ public class BulletPlayer : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            if(collision.gameObject.CompareTag("Enemies"))
+            {
+                IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+                if(damageable != null)
+                {
+                    damageable.Damage(100);
+                    Debug.Log("Hit Enemy");
+                }
+            }
         }
     }
 

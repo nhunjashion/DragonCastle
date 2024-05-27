@@ -24,6 +24,7 @@ public class MeleeAttack : MonoBehaviour
         MeleeAttacking();
     }
 
+
     void MeleeAttacking()
     {
 
@@ -32,13 +33,18 @@ public class MeleeAttack : MonoBehaviour
         {
             PlayerMovement.Instance.FlipAnim();
             anim.SetTrigger("Attack");
+            AudioManager.instance.PlaySFX(AudioManager.instance.swordSlash);
 
             Collider2D[] hitEnemies =  Physics2D.OverlapCircleAll(attackPoint.position, meleeAttackRange, enemyLayers);
 
             foreach (Collider2D enemy in hitEnemies)
             {
                 Debug.Log("We hit " + enemy.name);
-                EnemyCtrl.Instance.TakeDmg(baseDmg);
+                IDamageable damageable = enemy.gameObject.GetComponent<IDamageable>();
+                if(damageable != null)
+                {
+                    damageable.Damage(baseDmg);
+                }
             }
         }
 

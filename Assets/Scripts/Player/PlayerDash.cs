@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
 {
+    public static PlayerDash instance;
+
     private bool canDash = true;
-    private bool isDashing;
+    public bool isDashing;
     [SerializeField] private float dashPower = 100f;
     [SerializeField] private float dashTime = 0.2f;
     [SerializeField] private float dashCooldown = 1f;
@@ -14,10 +16,13 @@ public class PlayerDash : MonoBehaviour
 
     private Rigidbody2D rb;
     Collider2D col;
+    Animator anim;
     private void Start()
     {
+        PlayerDash.instance = this;
         rb= GetComponent<Rigidbody2D>(); 
         col= GetComponent<CapsuleCollider2D>();
+        anim = GetComponent<Animator>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -32,7 +37,7 @@ public class PlayerDash : MonoBehaviour
     }
 
 
-    private void Update()
+    public void Update()
     {
 
             if (isDashing)
@@ -42,29 +47,38 @@ public class PlayerDash : MonoBehaviour
             }
             if(InputManager.Instance.Dashing && canDash)
             {
-                StartCoroutine(Dashing());    
+
+                anim.SetBool("isDashing", true);
+                StartCoroutine(Dashing());  
+                
                 if(col.gameObject.CompareTag("Ground") && isDashing)
                 {
+                    anim.SetBool("isDasing", false);
                     rb.velocity=Vector2.zero;
                 }
             }
-        
+
         
     }
 
-    private IEnumerator Dashing()
+    public IEnumerator Dashing()
     {
+        PlayerHealth.Instance.canGetDmg = false;
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(transform.localScale.x * dashPower, 0f);
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.dash);
         tr.emitting = true;
         yield return new WaitForSeconds(dashTime);
         tr.emitting=false;
         rb.gravityScale = originalGravity;
         isDashing=false;
         yield return new WaitForSeconds(dashCooldown);
+        anim.SetBool("isDashing", false);
         canDash=true;
+        PlayerHealth.Instance.canGetDmg = true;
     }
 }
